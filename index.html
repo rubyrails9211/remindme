@@ -1,0 +1,609 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Remind me API docs</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;Ruby&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+      <div style="color: #fff; text-align: center;">Nugen I.T Services</div>
+        <div class="lang-selector">
+              <a href="#" data-language-name="Ruby">Ruby</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#login-signup" class="toc-h1 toc-link" data-title="Login-Signup">Login-Signup</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#signup-create-user" class="toc-h2 toc-link" data-title="Signup - Create User">Signup - Create User</a>
+                  </li>
+                  <li>
+                    <a href="#login-authentication" class="toc-h2 toc-link" data-title="Login - Authentication">Login - Authentication</a>
+                  </li>
+                  <li>
+                    <a href="#fetch-single-user" class="toc-h2 toc-link" data-title="Fetch Single User">Fetch Single User</a>
+                  </li>
+                  <li>
+                    <a href="#update-password" class="toc-h2 toc-link" data-title="Update Password">Update Password</a>
+                  </li>
+                  <li>
+                    <a href="#send-code-for-forgot-password" class="toc-h2 toc-link" data-title="Send Code for Forgot Password">Send Code for Forgot Password</a>
+                  </li>
+                  <li>
+                    <a href="#change-password-forgot-password" class="toc-h2 toc-link" data-title="Change Password (Forgot Password)">Change Password (Forgot Password)</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='http://nugeninfo.com'>Remind me API Docs</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>Remind me Api Docs</p>
+<h1 id='login-signup'>Login-Signup</h1><h2 id='signup-create-user'>Signup - Create User</h2>
+<blockquote>
+<p>Success-Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="err">HTTP</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="err">OK</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<blockquote>
+<p>Error-Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="err">HTTP</span><span class="w"> </span><span class="mi">422</span><span class="w"> </span><span class="err">Unprocessable</span><span class="w"> </span><span class="err">entity</span><span class="w">
+</span><span class="p">{</span><span class="w">
+     </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Email already taken"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>This endpoint will save a new user.
+Send below params for different account types</p>
+
+<p>For Personal =&gt; <code>address,city,province,postal_code,country,dob,first_name,last_name</code></p>
+
+<p>For Business =&gt; <code>address,city,province,postal_code,country,dob,business_name,business_speciality, contact_person_name,business_website_url</code></p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST https://remindmee.herokuapp.com/v1/users</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mobile</td>
+<td>String</td>
+<td>Mobile number of user</td>
+</tr>
+<tr>
+<td>account_type</td>
+<td>String</td>
+<td>&#39;personal&#39; or &#39;business&#39;</td>
+</tr>
+<tr>
+<td>email</td>
+<td>String</td>
+<td>User email</td>
+</tr>
+<tr>
+<td>address</td>
+<td>String</td>
+<td>address of user</td>
+</tr>
+<tr>
+<td>city</td>
+<td>String</td>
+<td>city of user</td>
+</tr>
+<tr>
+<td>province</td>
+<td>String</td>
+<td>province of user</td>
+</tr>
+<tr>
+<td>postal_code</td>
+<td>String</td>
+<td>postal code of user</td>
+</tr>
+<tr>
+<td>country</td>
+<td>String</td>
+<td>country of user</td>
+</tr>
+<tr>
+<td>dob</td>
+<td>String</td>
+<td>Date of birth</td>
+</tr>
+<tr>
+<td>first_name</td>
+<td>String</td>
+<td>First name</td>
+</tr>
+<tr>
+<td>last_name</td>
+<td>String</td>
+<td>Last name</td>
+</tr>
+<tr>
+<td>business_name</td>
+<td>String</td>
+<td>Bussiness name</td>
+</tr>
+<tr>
+<td>business_speciality</td>
+<td>String</td>
+<td>Business Speciality</td>
+</tr>
+<tr>
+<td>business_website_url</td>
+<td>String</td>
+<td>Website url</td>
+</tr>
+<tr>
+<td>contact_person_name</td>
+<td>String</td>
+<td>Contact person name</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+ Send Data in the below formar
+</aside>
+
+<p><code>{
+  &quot;email&quot;: &quot;shilpasyal55@gmail.com&quot;,
+  &quot;mobile&quot;: &quot;98787888&quot;,
+  &quot;account_type&quot;: &quot;personal&quot;,
+  &quot;userdetail_attributes&quot;:{
+    &quot;first_name&quot;: &quot;shilpaa&quot;,
+    &quot;last_name&quot;: &quot;syal&quot;,
+    &quot;address&quot;: &quot;jalandhar&quot;,
+    &quot;city&quot;:&quot;jal&quot;,
+    &quot;province&quot;: &quot;jij&quot;,
+    &quot;postal_code&quot;: &quot;27&quot;,
+    &quot;country&quot;: &quot;india&quot;,
+    &quot;dob&quot;: &quot;12&quot;
+  } 
+}</code></p>
+<h2 id='login-authentication'>Login - Authentication</h2>
+<blockquote>
+<p>Success-Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="err">HTTP</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="err">OK</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7dhf8hfjhdjf8rrhjdjfhdf844"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"account_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"personal"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<blockquote>
+<p>Error-Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="err">HTTP</span><span class="w"> </span><span class="mi">401</span><span class="w"> </span><span class="err">Unprocessable</span><span class="w"> </span><span class="err">entity</span><span class="w">
+</span><span class="p">{</span><span class="w">
+     </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Email/Password doesnot match"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>Login/Authenticate User.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST https://remindmee.herokuapp.com/v1/login</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>email</td>
+<td>String</td>
+<td>Email of user</td>
+</tr>
+<tr>
+<td>password</td>
+<td>String</td>
+<td>Password of user</td>
+</tr>
+</tbody></table>
+<h2 id='fetch-single-user'>Fetch Single User</h2>
+<blockquote>
+<p>Success-Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="err">HTTP</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="err">OK</span><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"mobile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"98787888"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"shilpasyal55@gmail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"account_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"personal"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-11-29T13:41:34.581Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-11-29T13:41:34.581Z"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<blockquote>
+<p>Error-Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="err">HTTP</span><span class="w"> </span><span class="mi">422</span><span class="w"> </span><span class="err">Unprocessable</span><span class="w"> </span><span class="err">entity</span><span class="w">
+</span><span class="p">{</span><span class="w">
+     </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Unable to find detail"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>Fetch single user detail</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET https://remindmee.herokuapp.com/v1/getUser</code></p>
+<h3 id='query-parameters-3'>Query Parameters</h3>
+<p>No Parameter</p>
+
+<aside class="success">
+ User must be authorized to fetch data.Send user token in the header.
+</aside>
+<h2 id='update-password'>Update Password</h2>
+<blockquote>
+<p>Success-Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="err">HTTP</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="err">OK</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<blockquote>
+<p>Error-Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="err">HTTP</span><span class="w"> </span><span class="mi">422</span><span class="w"> </span><span class="err">Unprocessable</span><span class="w"> </span><span class="err">entity</span><span class="w">
+</span><span class="p">{</span><span class="w">
+     </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Your password was incorrect"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>Update user Password when user is logged in</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>POST https://remindmee.herokuapp.com/v1/changePassword</code></p>
+<h3 id='query-parameters-4'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>old_password</td>
+<td>String</td>
+<td>Old Password of the user</td>
+</tr>
+<tr>
+<td>new_password</td>
+<td>String</td>
+<td>New Password of the user</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+ User must be authorized to change password.Send user token in the header.
+</aside>
+<h2 id='send-code-for-forgot-password'>Send Code for Forgot Password</h2>
+<blockquote>
+<p>Success-Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="err">HTTP</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="err">OK</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<blockquote>
+<p>Error-Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="err">HTTP</span><span class="w"> </span><span class="mi">422</span><span class="w"> </span><span class="err">Unprocessable</span><span class="w"> </span><span class="err">entity</span><span class="w">
+</span><span class="p">{</span><span class="w">
+     </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Email not present in our database"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>To reset password, Api will send code for resetting the password.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>POST https://remindmee.herokuapp.com/v1/forgotPassword</code></p>
+<h3 id='query-parameters-5'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>mobile</td>
+<td>String</td>
+<td>Registered Mobile number of user</td>
+</tr>
+</tbody></table>
+<h2 id='change-password-forgot-password'>Change Password (Forgot Password)</h2>
+<blockquote>
+<p>Success-Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="err">HTTP</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="err">OK</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<blockquote>
+<p>Error-Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="err">HTTP</span><span class="w"> </span><span class="mi">422</span><span class="w"> </span><span class="err">Unprocessable</span><span class="w"> </span><span class="err">entity</span><span class="w">
+</span><span class="p">{</span><span class="w">
+     </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Email not present in our database"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>Change Password</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>POST https://remindmee.herokuapp.com/v1/updatePassword</code></p>
+<h3 id='query-parameters-6'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>code</td>
+<td>String</td>
+<td>Code sent to the registered mobile number</td>
+</tr>
+<tr>
+<td>password</td>
+<td>String</td>
+<td>New Password</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="Ruby">Ruby</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

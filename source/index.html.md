@@ -333,3 +333,83 @@ image | String | photo of  user
 <aside class="success">
  User must be authorized to change password.Send user token in the header.
 </aside>
+
+
+## Update User Info
+
+> Success-Response:
+
+```json
+
+HTTP 200 OK
+{
+  "msg": 1
+}
+
+```
+
+> Error-Response
+
+```json
+HTTP 422 Unprocessable entity
+{
+     "msg": 0
+}
+
+```
+
+Update user credentials
+
+### HTTP Request
+
+`POST https://remindmee.herokuapp.com/v1/updateUser`
+
+
+For Personal => `address,city,province,postal_code,country,dob,first_name,last_name`
+
+For Business => `address,city,province,postal_code,country,dob,business_name,business_speciality, contact_person_name,business_website_url`
+
+
+### HTTP Request
+
+`POST https://remindmee.herokuapp.com/v1/updateUser`
+
+### Query Parameters
+
+Parameter | Type | Description
+--------- | ------- | -----------
+mobile | String | Mobile number of user
+account_type | String | 'personal' or 'business'
+email | String | User email
+address | String | address of user
+city | String | city of user
+province | String | province of user
+postal_code | String | postal code of user
+country | String | country of user
+dob | String | Date of birth
+first_name | String | First name
+last_name | String | Last name
+business_name | String | Bussiness name
+business_speciality | String | Business Speciality
+business_website_url | String | Website url
+contact_person_name | String | Contact person name
+
+<aside class="success">
+ Send Data in the below formar
+</aside>
+
+`{
+  "email": "shilpasyal55@gmail.com",
+  "mobile": "98787888",
+  "account_type": "personal",
+  "userdetail_attributes":{
+    "first_name": "shilpaa",
+    "last_name": "syal",
+    "address": "jalandhar",
+    "city":"jal",
+    "province": "jij",
+    "postal_code": "27",
+    "country": "india",
+    "dob": "12"
+  } 
+}`

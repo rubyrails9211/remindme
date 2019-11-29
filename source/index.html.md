@@ -293,3 +293,43 @@ Parameter | Type | Description
 code | String | Code sent to the registered mobile number
 password | String | New Password
 
+
+## Update/Save User Image
+
+> Success-Response:
+
+```json
+
+HTTP 200 OK
+{
+    "msg": 1
+}
+
+```
+
+> Error-Response
+
+```json
+HTTP 422 Unprocessable entity
+{
+     "msg": 0,
+     "error": "Image can't be blank"
+}
+
+```
+
+Update or save user image.
+
+### HTTP Request
+
+`POST https://remindmee.herokuapp.com/v1/updateImage`
+
+### Query Parameters
+
+Parameter | Type | Description
+--------- | ------- | -----------
+image | String | photo of  user
+
+<aside class="success">
+ User must be authorized to change password.Send user token in the header.
+</aside>

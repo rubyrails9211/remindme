@@ -104,7 +104,8 @@ HTTP 200 OK
 {
   "token": "7dhf8hfjhdjf8rrhjdjfhdf844",
   "msg": 1,
-  "account_type": "personal"
+  "account_type": "personal",
+  "first_login": true
 }
 
 ```
@@ -213,6 +214,48 @@ Update user Password when user is logged in
 Parameter | Type | Description
 --------- | ------- | -----------
 old_password | String | Old Password of the user
+new_password | String | New Password of the user
+
+<aside class="success">
+ User must be authorized to change password.Send user token in the header.
+</aside>
+
+
+
+## Change Password First Time
+
+> Success-Response:
+
+```json
+
+HTTP 200 OK
+{
+  "msg": 1
+}
+
+```
+
+> Error-Response
+
+```json
+HTTP 422 Unprocessable entity
+{
+     "msg": 0,
+     "error": "Error while changing password.Please try again later."
+}
+
+```
+
+Update user Password when user is logged in for first time
+
+### HTTP Request
+
+`POST https://remindmee.herokuapp.com/v1/changeTemporaryPassword`
+
+### Query Parameters
+
+Parameter | Type | Description
+--------- | ------- | -----------
 new_password | String | New Password of the user
 
 <aside class="success">

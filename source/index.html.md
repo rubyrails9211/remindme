@@ -143,13 +143,26 @@ password | String | Password of user
 
 HTTP 200 OK
 {
-    "id": 1,
+    "id": 2,
     "mobile": "98787888",
-    "email": "shilpasyal55@gmail.com",
+    "email": "amanpreetbh@gmail.com",
     "account_type": "personal",
     "is_active": true,
-    "created_at": "2019-11-29T13:41:34.581Z",
-    "updated_at": "2019-11-29T13:41:34.581Z"
+    "first_login": true,
+    "user_id": 2,
+    "first_name": "aman",
+    "last_name": "sharma",
+    "business_name": null,
+    "business_speciality": null,
+    "contact_person_name": null,
+    "address": "jalandhar",
+    "city": "jal",
+    "province": "jij",
+    "postal_code": "27",
+    "country": "india",
+    "dob": "12",
+    "image": null,
+    "business_website_url": null
 }
 
 ```
@@ -170,6 +183,8 @@ Fetch single user detail
 ### HTTP Request
 
 `GET https://remindmee.herokuapp.com/v1/getUser`
+
+`Use the user_id column value to do any operation`
 
 ### Query Parameters
 

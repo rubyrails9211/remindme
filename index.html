@@ -450,13 +450,26 @@ Send below params for different account types</p>
 <pre class="highlight json tab-json"><code><span class="w">
 </span><span class="err">HTTP</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="err">OK</span><span class="w">
 </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
     </span><span class="s2">"mobile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"98787888"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"shilpasyal55@gmail.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"amanpreetbh@gmail.com"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"account_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"personal"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-11-29T13:41:34.581Z"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-11-29T13:41:34.581Z"</span><span class="w">
+    </span><span class="s2">"first_login"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"aman"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sharma"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"business_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"business_speciality"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"contact_person_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jalandhar"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jal"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"province"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jij"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"postal_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"27"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"india"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"dob"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"business_website_url"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
@@ -473,6 +486,8 @@ Send below params for different account types</p>
 <p>Fetch single user detail</p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>GET https://remindmee.herokuapp.com/v1/getUser</code></p>
+
+<p><code>Use the user_id column value to do any operation</code></p>
 <h3 id='query-parameters-3'>Query Parameters</h3>
 <p>No Parameter</p>
 

@@ -471,3 +471,83 @@ contact_person_name | String | Contact person name
     "dob": "12"
   } 
 }`
+
+
+# Create Reminder/Event
+
+## Signup - Create User
+
+
+> Success-Response:
+
+```json
+
+HTTP 200 OK
+{
+  "msg": 1
+}
+
+```
+
+> Error-Response
+
+```json
+HTTP 422 Unprocessable entity
+{
+     "msg": 0,
+     "error": "Title Can't be blank"
+}
+
+```
+
+This endpoint will save a new event/reminder.
+
+
+### HTTP Request
+
+`POST https://remindmee.herokuapp.com/v1/events`
+
+### Query Parameters
+
+See the example Object
+
+<aside class="success">
+ Send Data in the below formar
+</aside>
+
+`
+  {
+  "title": "new task",
+  "description": "dummy",
+  "event_start": "2020-01-17 10:31:08 +0530",
+  "event_end": "2020-01-17 10:31:08 +0530",
+  "event_type": "event",  // or 'reminder'
+  "is_recurring": true,
+  "street_name": "test",
+  "unit_suite": "test",
+  "city": "test",
+  "state": "test",
+  "postal_code": "test",
+  "invitees": [
+    "shilpa@gmail.com",
+    "aman@gmail.com"
+  ],
+  "reminder_setting": "2",  // days count
+  "schedule": {
+    "frequency": "weekly",
+    "interval": 2,
+    "day_of_month": "null",
+    "month_of_year": "null",
+    "recurrence_until": "2020-01-28",
+    "days_of_week": {
+      "monday": true,
+      "tuesday": true,
+      "wednesday": false,
+      "thursday": false,
+      "friday": false,
+      "saturday": false,
+      "sunday": false
+    }
+  }
+}
+`

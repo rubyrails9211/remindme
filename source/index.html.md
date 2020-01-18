@@ -473,9 +473,9 @@ contact_person_name | String | Contact person name
 }`
 
 
-# Create Reminder/Event
+#  Reminder/Event
 
-## Signup - Create User
+## Create Reminder/Event
 
 
 > Success-Response:
@@ -515,7 +515,7 @@ See the example Object
  Send Data in the below formar
 </aside>
 
-`
+```json
   {
   "title": "new task",
   "description": "dummy",
@@ -550,4 +550,4 @@ See the example Object
     }
   }
 }
-`
+```

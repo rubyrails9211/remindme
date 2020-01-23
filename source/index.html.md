@@ -512,16 +512,19 @@ This endpoint will save a new event/reminder.
 See the example Object
 
 <aside class="success">
- Send Data in the below formar
+ Send Data in the below format
 </aside>
 
+
+
 ```json
+  CREATE  EVENT
   {
   "title": "new task",
   "description": "dummy",
   "event_start": "2020-01-17 10:31:08 +0530",
   "event_end": "2020-01-17 10:31:08 +0530",
-  "event_type": "event",  // or 'reminder'
+  "event_type": "event", 
   "is_recurring": true,
   "street_name": "test",
   "unit_suite": "test",
@@ -533,6 +536,34 @@ See the example Object
     "aman@gmail.com"
   ],
   "reminder_setting": "2",  // days count
+  "schedule": {
+    "frequency": "weekly",
+    "interval": 2,
+    "day_of_month": "null",
+    "month_of_year": "null",
+    "recurrence_until": "2020-01-28",
+    "days_of_week": {
+      "monday": true,
+      "tuesday": true,
+      "wednesday": false,
+      "thursday": false,
+      "friday": false,
+      "saturday": false,
+      "sunday": false
+    }
+  }
+}
+```
+
+
+```json
+  CREATE  REMINDER
+  {
+  "title": "new reminder",
+  "event_start": "2020-01-17 10:31:08 +0530",
+  "event_end": "2020-01-17 10:31:08 +0530",
+  "event_type": "reminder", 
+  "is_recurring": true,
   "schedule": {
     "frequency": "weekly",
     "interval": 2,

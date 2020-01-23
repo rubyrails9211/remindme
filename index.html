@@ -875,14 +875,15 @@ Send below params for different account types</p>
 <p>See the example Object</p>
 
 <aside class="success">
- Send Data in the below formar
+ Send Data in the below format
 </aside>
-<pre class="highlight json tab-json"><code><span class="w">  </span><span class="p">{</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="w">  </span><span class="err">CREATE</span><span class="w">  </span><span class="err">EVENT</span><span class="w">
+  </span><span class="p">{</span><span class="w">
   </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"new task"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dummy"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"event_start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-17 10:31:08 +0530"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"event_end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-17 10:31:08 +0530"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"event_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"event"</span><span class="p">,</span><span class="w">  </span><span class="err">//</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">'reminder'</span><span class="w">
+  </span><span class="s2">"event_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"event"</span><span class="p">,</span><span class="w"> 
   </span><span class="s2">"is_recurring"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="s2">"street_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"unit_suite"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
@@ -894,6 +895,30 @@ Send below params for different account types</p>
     </span><span class="s2">"aman@gmail.com"</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"reminder_setting"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">  </span><span class="err">//</span><span class="w"> </span><span class="err">days</span><span class="w"> </span><span class="err">count</span><span class="w">
+  </span><span class="s2">"schedule"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"frequency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"weekly"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"interval"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"day_of_month"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"month_of_year"</span><span class="p">:</span><span class="w"> </span><span class="s2">"null"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recurrence_until"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-28"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"days_of_week"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"monday"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"tuesday"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"wednesday"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"thursday"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"friday"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"saturday"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"sunday"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><pre class="highlight json tab-json"><code><span class="w">  </span><span class="err">CREATE</span><span class="w">  </span><span class="err">REMINDER</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"new reminder"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"event_start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-17 10:31:08 +0530"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"event_end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-17 10:31:08 +0530"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"event_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reminder"</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"is_recurring"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
   </span><span class="s2">"schedule"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"frequency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"weekly"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"interval"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
